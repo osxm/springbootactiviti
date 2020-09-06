@@ -9,12 +9,4 @@ spring:
     activiti:
         database-schema-update: true
         history-level: full
-        db-history-used: true
-                
-    thymeleaf:
-        mode: HTML
-        encoding: utf-8
-        cache: false  #热加载
-        
-    mvc:
-        static-path-pattern: /static/**    
+        db-history-used: true              

@@ -29,14 +29,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder()).withUser("oscar")
-				.password(new BCryptPasswordEncoder().encode("1")).roles("USER");
+				.password(new BCryptPasswordEncoder().encode("1")).roles("ADMIN");
 
 	}
-	
-	/*@Override
-	public void configure(HttpSecurity http) throws Exception {
-		http.formLogin().loginProcessingUrl("/home");
-	}*/
-
 	
 }

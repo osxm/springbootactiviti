@@ -8,8 +8,8 @@
  */
 package com.osxm.springbootactiviti.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
   * @ClassName: HomeController
@@ -17,11 +17,16 @@ import org.springframework.web.bind.annotation.GetMapping;
   * @author oscarchen
   */
 
-@Controller
+@RestController
 public class HomeController {
 
 	@GetMapping("/home")
 	public String home() {
-		return "index";
+		return "Home Page";
+	}
+	
+	@GetMapping("/")
+	public String index() {
+		return "Index Page";
 	}
 }
